@@ -1,0 +1,598 @@
+/* marge a 0 pour tous les éléments */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* palette de couleurs */
+:root {
+    --grey-dark : #1e1e1e;  
+    --lightest : white;
+    --orange : #ff7b00;
+    --gradient-greydark : rgb(151,150,153);
+    --gradient-greydark2 : radial-gradient(circle, rgba(151,150,153,1) 5%, rgba(219,219,224,1) 52%, rgba(178,177,182,1) 95%);
+    --gradient-greylight : rgb(238,238,238);
+    --gradient-greylight2 : radial-gradient(circle, rgba(238,238,238,1) 5%, rgba(255,255,255,1) 52%, rgba(196,196,196,1) 95%);
+    --gradient-blue : rgb(57,86,172);
+    --gradient-blue2 : radial-gradient(circle, rgba(57,86,172,1) 5%, rgba(28,61,120,1) 52%, rgba(30,69,106,1) 95%);
+    --bluedark : #13397d;
+    --orangedark : #cd800f;
+}
+
+/* style de la barre de navigation */
+
+/* ---- Style du header (barre de navigation) ---- */
+header {
+    position: fixed; /* Fixe le header en haut de la page */
+    top: 0; /* L’ancre en haut */
+    left: 0;
+    width: 100%; /* Prend toute la largeur */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Ombre légère pour démarquer */
+    padding: 15px 20px; /* Ajuste le padding */
+    z-index: 1000; /* Assure qu'il reste au-dessus des autres éléments */
+    background: var(--grey-dark);
+}
+
+
+/* ---- Style de la liste de navigation ---- */
+header ul {
+    list-style: none; /* Supprime les puces des listes */
+    padding: 0;
+    margin: 0;
+    display: flex; /* Affichage en ligne (horizontal) */
+    gap: 30px; /* Espacement entre les éléments */
+    justify-content: center;
+}
+
+/* ---- Style des liens de navigation ---- */
+header ul li a {
+    text-decoration: none; /* Supprime le soulignement des liens */
+    color: var(--lightest); /* Définit la couleur du texte en blanc */
+    font-size: 18px; /* Définit une taille de texte lisible */
+    font-weight: 500; /* Rend le texte légèrement plus épais */
+    transition: color 0.3s ease, transform 0.3s ease; /* Ajoute une transition fluide */
+    padding: 10px 15px; /* Ajoute de l’espace autour du texte */
+    border-radius: 5px; /* Arrondit légèrement les bords */
+}
+
+/* ---- Effet au survol des liens ---- */
+header ul li a:hover {
+    color: var(--orange); /* Change la couleur du texte en orange au survol */
+    transform: scale(1.1); /* Agrandit légèrement l'élément au survol */
+}
+
+/* ---- Responsive pour mobile ---- */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; /* Affichage en colonne sur mobile */
+        align-items: center;
+    }
+
+    header ul {
+        flex-direction: column; /* Les liens passent en colonne */
+        gap: 15px;
+    }
+}
+
+
+
+.slider {
+    width: 100%;
+    height: 80vh; /* Assure que le slider prend tout l'écran */
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Évite les débordements */
+}
+
+
+.slider-background {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(35%);
+}
+
+.slide-content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+}
+
+/* --- STYLE MODERNE DU H1 --- */
+.slide-content h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    text-transform: uppercase; /* Majuscules pour un effet pro */
+    letter-spacing: 2px; /* Espacement des lettres */
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3); /* Ombre légère */
+    background: linear-gradient(45deg, #ff4b1f, #ff9068);
+    -webkit-background-clip: text; /* Applique le gradient au texte */
+    -webkit-text-fill-color: transparent; /* Rend le texte transparent */
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* --- STYLE MODERNE DU PARAGRAPHE --- */
+.slide-content p {
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-top: 15px;
+    line-height: 1.6; /* Espacement entre les lignes */
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    color: rgba(255, 255, 255, 0.8); /* Blanc avec opacité */
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* --- ANIMATION D'APPARITION (FADE IN) --- */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+body {
+    background: var(--gradient-greydark);
+    background: var(--gradient-greydark2);
+    font-family: "Fira Code", serif;
+}
+
+
+
+/* --- SECTION PRÉSENTATION --- */
+.presentation {
+    display: flex; /* Utilisation de flexbox pour aligner l'image et le texte */
+    align-items: center; /* Centre verticalement l'image et le texte */
+    gap: 40px; /* Ajoute un espace entre l'image et le texte */
+    padding: 50px 10%; /* Ajoute un padding autour de la section */
+    background: var(--gradient-greydark);
+    background: var(--gradient-greydark2);
+}
+
+/* --- TITRE PRÉSENTATION --- */
+#h2-presentation {
+    font-size: 2rem; /* Taille du titre */
+    font-weight: 600; /* Met en gras */
+    color: #333; /* Couleur du texte */
+    text-align: center; /* Centre le titre */
+    width: 100%; /* Assure que le titre prend toute la largeur */
+    margin-bottom: 20px; /* Espace sous le titre */
+}
+
+
+/* --- IMAGE PRÉSENTATION --- */
+.img-presentation {
+    width: 420px; /* Taille de l’image */
+    max-width: 100%; /* S'assure qu'elle reste responsive */
+    border-radius: 10px; /* Arrondit légèrement les bords */
+    margin-left: -10%;
+    margin-top: -80px;
+
+}
+
+
+/* --- TEXTE PRÉSENTATION --- */
+.presentation p {
+    font-size: 1.1rem; /* Agrandit le texte */
+    color: #333; /* Couleur légèrement foncée */
+    line-height: 1.6; /* Espacement entre les lignes */
+    max-width: 800px; /* Limite la largeur du texte */
+    text-align: center; /* Justifie le texte pour une belle mise en page */
+}
+
+/* Responsive : Ajustements pour petits écrans */
+@media (max-width: 768px) {
+    .presentation {
+        flex-direction: column; /* Passe en colonne sur mobile */
+        text-align: center; /* Centre tout le contenu */
+    }
+
+    .img-presentation {
+        width: 80%; /* Adapte la taille de l’image */
+    }
+
+    .presentation p {
+        text-align: center; /* Centre le texte */
+    }
+}
+
+
+
+#h2-presentation {
+    font-size: 2rem; /* Taille plus grande pour être visible */
+    font-weight: 600;
+    color: #333; /* Même couleur que le paragraphe */
+    margin-bottom: 80px; /* Ajoute un espace sous le titre */
+    margin-left: 30px; /* décalle le h2 vers la droite */
+}
+
+/* --- SECTION STAGES --- */
+.stage {
+    text-align: center; /* Centre le titre "Mes Stages" */
+    padding: 50px 20px; /* Ajoute de l'espace autour de la section */
+    background:var(--gradient-greylight); /* couleur du fond */
+    background: var(--gradient-greylight2);
+    position: relative;
+    height: auto;
+}
+
+/* --- TITRE DES STAGES --- */
+#h2-stage {
+    font-size: 2rem; /* Agrandit le titre */
+    font-weight: 600; /* Rend le texte plus épais */
+    color: #333; /* Couleur sombre pour le texte */
+    margin-bottom: 80px; /* Ajoute un espace sous le titre */
+    text-transform: uppercase; /* Met le titre en majuscules */
+}
+
+
+/* --- CONTAINER DES STAGES --- */
+.stages-container {
+    display: flex; /* Met les cartes côte à côte */
+    justify-content: center; /* Centre les cartes horizontalement */
+    align-items: flex-start;
+    gap: 100px; /* Ajoute un espace entre les cartes */
+    flex-wrap: wrap; /* Permet aux cartes de passer en colonne sur petit écran */
+}
+
+/* --- STYLE DES CARTES --- */
+.stage-card-1 {
+    background-color: white; /* couleur du fond */
+    padding: 20px; /* Espacement interne */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Ombre légère pour effet moderne */
+    width: 300px; /* Largeur de chaque carte */
+    text-align: left; /* Aligne le texte à gauche */
+    position: relative; /* Permet de positionner les éléments internes */
+    transition: transform 0.3s ease; /* Animation au survol */
+}
+
+.stage-card-2 {
+    background-color: white; /* couleur du fond */
+    padding: 20px; /* Espacement interne */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Ombre légère pour effet moderne */
+    width: 300px; /* Largeur de chaque carte */
+    text-align: left; /* Aligne le texte à gauche */
+    position: relative; /* Permet de positionner les éléments internes */
+    transition: transform 0.3s ease; /* Animation au survol */
+}
+
+/* Effet de zoom léger au survol */
+.stage-card-1:hover {
+    transform: translateY(-5px); /* Fait légèrement remonter la carte */
+}
+
+.stage-card-2:hover {
+    transform: translateY(-5px); /* Fait légèrement remonter la carte */
+}
+
+
+/* --- PARAGRAPHES (INFOS DU STAGE) --- */
+.stage-card-1 p {
+    font-size: 1rem; /* Taille lisible */
+    color: #444; /* Gris foncé pour une bonne lisibilité */
+    margin-bottom: 15px; /* Espacement sous le texte */
+    line-height: 1.6; /* Espacement entre les lignes */
+}
+
+.stage-card-2 p {
+    font-size: 1rem; /* Taille lisible */
+    color: #444; /* Gris foncé pour une bonne lisibilité */
+    margin-bottom: 15px; /* Espacement sous le texte */
+    line-height: 1.6; /* Espacement entre les lignes */
+}
+
+/* --- BOUTON RAPPORT DE STAGE --- */
+.stage-card-1 a {
+    display: inline-block; /* Transforme le lien en bouton */
+    padding: 10px 15px; /* Ajoute du padding pour un meilleur aspect */
+    background-color: var(--bluedark); /* Bleu */
+    color: white; /* Texte blanc */
+    text-decoration: none; /* Supprime le soulignement du lien */
+    border-radius: 5px; /* Arrondit les bords */
+    font-weight: bold; /* Texte en gras */
+    transition: background 0.3s ease; /* Animation au survol */
+}
+
+.stage-card-2 a {
+    display: inline-block; /* Transforme le lien en bouton */
+    padding: 10px 15px; /* Ajoute du padding pour un meilleur aspect */
+    background-color: var(--orangedark); /* Bleu */
+    color: white; /* Texte blanc */
+    text-decoration: none; /* Supprime le soulignement du lien */
+    border-radius: 5px; /* Arrondit les bords */
+    font-weight: bold; /* Texte en gras */
+    transition: background 0.3s ease; /* Animation au survol */
+}
+
+/* Effet au survol du bouton */
+.stage-card-1 a:hover {
+    background-color: #0056b3; /* Bleu foncé au survol */
+}
+
+.stage-card-2 a:hover {
+    background-color: #0056b3; /* Bleu foncé au survol */
+}
+
+/* --- EN-TÊTE DES DATES --- */
+.stage-header-1 {
+    background:var(--bluedark);
+    color: white;
+    font-size: 1.1rem;
+    font-weight: bold;
+    padding: 15px;
+    text-align: center;
+    position: relative;
+    width: 90%;
+    margin: auto;
+    margin-bottom: 15px;
+}
+
+.stage-header-2 {
+    background:var(--orangedark);
+    color: white;
+    font-size: 1.1rem;
+    font-weight: bold;
+    padding: 15px;
+    text-align: center;
+    position: relative;
+    width: 90%;
+    margin: auto;
+    margin-bottom: 15px;
+}
+
+
+#stage2 {
+    position: relative;
+    margin-top: 250px;
+}
+
+/* --- Style général des images de stage --- */
+
+.img-stage-1 {
+    width: 380px; /* Redimensionne l’image */
+    max-width: 100%; /* Empêche les débordements */
+    position: absolute; /* Permet de placer l’image où on veut */
+    top: 50%; 
+    right: 60%; 
+}
+
+.img-stage-2 {
+    width: 380px; /* Redimensionne l’image */
+    max-width: 100%; /* Empêche les débordements */
+    position: absolute; /* Permet de placer l’image où on veut */
+    bottom: 40%; 
+    left: 60%;
+}
+
+/* --- SECTION COMPÉTENCES --- */
+.competences {
+    text-align: center;
+    padding: 60px 10%;
+    background: var(--gradient-greydark);
+    background: var(--gradient-greydark2);
+}
+
+/* --- TITRE PRINCIPAL --- */
+#h2-competences {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 100px;
+}
+
+
+/* --- CATÉGORIES --- */
+.competence-category {
+    margin-bottom: 50px;
+}
+
+.competence-category h3 {
+    font-size: 1.5rem;
+    color: #007bff;
+    margin-bottom: 100px;
+    margin-top: 100px;
+}
+
+/* --- GRILLE DES LANGAGES & OUTILS --- */
+.competence-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.competence-card {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 120px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.competence-card img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+.competence-card p {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+.competence-card:hover {
+    transform: scale(1.1);
+}
+
+/* --- SECTION MOOCs --- */
+.mooc-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+/* --- STYLE DES CARTES MOOCs --- */
+.mooc-card {
+    display: flex;
+    align-items: center;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.mooc-card:hover {
+    transform: scale(1.02);
+}
+
+/* --- IMAGE DU MOOC --- */
+.mooc-img {
+    width: 120px; /* Ajuste selon tes images */
+    height: auto;
+    border-radius: 10px;
+    margin-right: 30px;
+}
+
+/* --- INFOS DU MOOC --- */
+.mooc-info {
+    text-align: left;
+}
+
+.mooc-info h4 {
+    font-size: 1.3rem;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.mooc-info p {
+    font-size: 1rem;
+    color: #555;
+}
+
+.mooc-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Deux colonnes égales */
+    gap: 20px; /* Espacement entre les cartes */
+    justify-content: center;
+    width: 80%;
+    margin: auto;
+}
+
+
+/* SECTION PROJETS */
+.projets {
+    padding: 80px 10%; /* Ajoute un espace autour de la section pour l'aérer */
+    text-align: center; /* Centre le titre et les éléments */
+    background:var(--gradient-greylight); /* couleur du fond */
+    background: var(--gradient-greylight2);
+}
+
+/* TITRE PRINCIPAL */
+.projets h2 {
+    font-size: 2rem; /* Taille du titre */
+    color: #333; /* Couleur du texte */
+    margin-bottom: 40px; /* Espace en dessous du titre */
+}
+
+/* CONTENEUR DES PROJETS */
+.projets-container {
+    display: flex; /* Utilisation de flexbox pour aligner les cartes horizontalement */
+    flex-wrap: wrap; /* Permet aux éléments de passer à la ligne sur petits écrans */
+    justify-content: space-between; /* Espace équitable entre les cartes */
+    gap: 20px; /* Ajoute un espace entre les projets */
+}
+
+/* CARTE INDIVIDUELLE POUR CHAQUE PROJET */
+.projet-card {
+    background: white; /* Fond blanc pour bien se détacher du fond */
+    border-radius: 12px 12px 0 0; /* Arrondit légèrement les bords pour un effet moderne */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre subtile pour effet de profondeur */
+    overflow: hidden; /* Évite que l’image dépasse des bords arrondis */
+    width: 30%; /* Chaque projet occupe 30% de la largeur du conteneur */
+    transition: transform 0.3s ease-in-out; /* Animation fluide au survol */
+}
+
+/* EFFET AU SURVOL : LÉGER DÉPLACEMENT VERS LE HAUT */
+.projet-card:hover {
+    transform: translateY(-5px); /* Fait légèrement "sauter" la carte au survol */
+}
+
+/* IMAGE DU PROJET */
+.projet-card img {
+    width: 100%; /* L’image prend toute la largeur de la carte */
+    height: 180px; /* Hauteur fixe pour garder un alignement propre */
+    object-fit: cover; /* Coupe l’image pour qu’elle remplisse bien son espace */
+}
+
+/* CONTENU TEXTE DU PROJET */
+.projet-info {
+    padding: 20px; /* Ajoute de l'espace à l'intérieur de la carte */
+}
+
+/* TITRE DU PROJET */
+.projet-info h3 {
+    font-size: 1.5rem; /* Taille du texte */
+    color: #222; /* Couleur foncée pour une bonne lisibilité */
+    margin-bottom: 10px; /* Ajoute un espace en dessous */
+}
+
+/* DESCRIPTION DU PROJET */
+.projet-info p {
+    font-size: 1rem; /* Taille du texte */
+    color: #555; /* Couleur gris foncé pour un look épuré */
+    margin-bottom: 15px; /* Ajoute un espace avant le bouton */
+}
+
+/* BOUTON DE CHAQUE PROJET */
+.btn-projet {
+    display: inline-block; /* Permet de donner une taille et un style au bouton */
+    padding: 10px 20px; /* Ajoute un espace interne */
+    background: linear-gradient(90deg, #007BFF, #00D4FF); /* Dégradé bleu moderne */
+    color: white; /* Texte en blanc */
+    font-weight: bold; /* Texte en gras */
+    text-decoration: none; /* Supprime le soulignement */
+    border-radius: 6px; /* Arrondit légèrement les coins */
+    transition: background 0.3s ease-in-out; /* Animation fluide */
+}
+
+/* EFFET HOVER SUR LE BOUTON */
+.btn-projet:hover {
+    background: linear-gradient(90deg, #0056b3, #0096c7); /* Change légèrement la couleur au survol */
+}
+
+/* RESPONSIVE DESIGN : ADAPTATION SUR PETITS ÉCRANS */
+@media screen and (max-width: 1024px) {
+    .projet-card {
+        width: 45%; /* Ajuste la taille à 2 projets par ligne sur tablette */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .projets-container {
+        flex-direction: column; /* Met les projets en colonne sur mobile */
+        align-items: center; /* Centre les projets */
+    }
+
+    .projet-card {
+        width: 90%; /* Les projets prennent presque toute la largeur */
+    }
+}
+
+
