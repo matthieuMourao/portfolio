@@ -596,3 +596,221 @@ body {
 }
 
 
+/* SECTION VEILLE TECHNOLOGIQUE */
+#veille-technologique {
+    padding: 80px 10%;
+    background: var(--gradient-greydark); 
+    background: var(--gradient-greydark2);
+    text-align: center;
+}
+
+/* TITRE DE LA SECTION */
+#veille-technologique h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+/* CONTENEUR PRINCIPAL */
+.veille-container {
+    display: flex;
+    justify-content: center; /* Centre les cartes */
+    gap: 30px; /* Ajoute de l’espace entre les cartes */
+    flex-wrap: wrap; /* Permet le passage en colonne sur mobile */
+}
+
+/* CARTES INDIVIDUELLES */
+.veille-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 45%; /* Chaque carte occupe 45% sur grand écran */
+    transition: transform 0.3s ease-in-out;
+    text-align: left;
+}
+
+/* EFFET DE SURVOL */
+.veille-card:hover {
+    transform: translateY(-5px);
+}
+
+/* IMAGE DES CARTES */
+.veille-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+/* CONTENU TEXTE */
+.veille-content {
+    padding: 20px;
+}
+
+/* TITRE DE CHAQUE VEILLE */
+.veille-content h3 {
+    font-size: 1.5rem;
+    color: #222;
+    margin-bottom: 10px;
+}
+
+/* DESCRIPTION */
+.veille-content p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+/* BOUTON POUR LIRE PLUS */
+.btn-veille {
+    display: inline-block;
+    padding: 10px 20px;
+    background: linear-gradient(90deg, #007BFF, #00D4FF);
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background 0.3s ease-in-out;
+}
+
+/* HOVER DU BOUTON */
+.btn-veille:hover {
+    background: linear-gradient(90deg, #0056b3, #0096c7);
+}
+
+/* RESPONSIVE DESIGN */
+@media screen and (max-width: 1024px) {
+    .veille-card {
+        width: 90%; /* Une seule carte par ligne sur tablette */
+    }
+}
+
+
+/* SECTION CONTACT */
+#contact {
+    padding: 80px 10%;
+    background: var(--gradient-greylight);
+    background: var(--gradient-greylight2);
+    text-align: center;
+}
+
+/* TITRE DE LA SECTION */
+#contact h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+/* CONTAINER PRINCIPAL */
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+/* FORMULAIRE */
+.contact-form {
+    width: 50%;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+/* CHAMPS DE SAISIE */
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.input-group input,
+.input-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+.input-group textarea {
+    height: 120px;
+    resize: none;
+}
+
+/* BOUTON D'ENVOI */
+.btn-contact {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(90deg, #007BFF, #00D4FF);
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 6px;
+    text-align: center;
+    transition: background 0.3s ease-in-out;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-contact:hover {
+    background: linear-gradient(90deg, #0056b3, #0096c7);
+}
+
+/* INFOS CONTACT */
+.contact-info {
+    width: 40%;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.contact-info p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+/* ICONES SOCIALES */
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.social-icons img {
+    width: 40px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.social-icons img:hover {
+    transform: scale(1.1);
+}
+
+/* RESPONSIVE DESIGN */
+@media screen and (max-width: 1024px) {
+    .contact-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .contact-form, .contact-info {
+        width: 100%;
+    }
+
+    .contact-info {
+        text-align: center;
+    }
+}
+
+
