@@ -17,6 +17,8 @@
     --gradient-blue2 : radial-gradient(circle, rgba(57,86,172,1) 5%, rgba(28,61,120,1) 52%, rgba(30,69,106,1) 95%);
     --bluedark : #13397d;
     --orangedark : #cd800f;
+    --orange1 :#ff4b1f ;
+    --orange2 :#ff9068 ;
 }
 
 /* style de la barre de navigation */
@@ -216,6 +218,7 @@ body {
     color: #333; /* Même couleur que le paragraphe */
     margin-bottom: 80px; /* Ajoute un espace sous le titre */
     margin-left: 30px; /* décalle le h2 vers la droite */
+    text-transform: uppercase; /* Met le titre en majuscules */
 }
 
 /* --- SECTION STAGES --- */
@@ -389,7 +392,8 @@ body {
     font-size: 2rem;
     font-weight: 600;
     color: #333;
-    margin-bottom: 100px;
+    margin-bottom: 80px;
+    text-transform: uppercase; /* Met le titre en majuscules */
 }
 
 
@@ -400,7 +404,7 @@ body {
 
 .competence-category h3 {
     font-size: 1.5rem;
-    color: #007bff;
+    color: var(--orange);
     margin-bottom: 100px;
     margin-top: 100px;
 }
@@ -507,8 +511,10 @@ body {
 /* TITRE PRINCIPAL */
 .projets h2 {
     font-size: 2rem; /* Taille du titre */
+    font-weight: 600;
     color: #333; /* Couleur du texte */
-    margin-bottom: 40px; /* Espace en dessous du titre */
+    margin-bottom: 80px; /* Espace en dessous du titre */
+    text-transform: uppercase; /* Met le titre en majuscules */
 }
 
 /* CONTENEUR DES PROJETS */
@@ -564,7 +570,7 @@ body {
 .btn-projet {
     display: inline-block; /* Permet de donner une taille et un style au bouton */
     padding: 10px 20px; /* Ajoute un espace interne */
-    background: linear-gradient(90deg, #007BFF, #00D4FF); /* Dégradé bleu moderne */
+    background: linear-gradient(90deg, var(--orange1), var(--orange2)); /* Dégradé bleu moderne */
     color: white; /* Texte en blanc */
     font-weight: bold; /* Texte en gras */
     text-decoration: none; /* Supprime le soulignement */
@@ -606,9 +612,11 @@ body {
 
 /* TITRE DE LA SECTION */
 #veille-technologique h2 {
-    font-size: 2.5rem;
+    font-size: 2rem;
+    font-weight: 600;
     color: #333;
-    margin-bottom: 40px;
+    margin-bottom: 80px;
+    text-transform: uppercase; /* Met le titre en majuscules */
 }
 
 /* CONTENEUR PRINCIPAL */
@@ -665,7 +673,7 @@ body {
 .btn-veille {
     display: inline-block;
     padding: 10px 20px;
-    background: linear-gradient(90deg, #007BFF, #00D4FF);
+    background: linear-gradient(90deg, var(--orange1), var(--orange2));
     color: white;
     font-weight: bold;
     text-decoration: none;
@@ -696,9 +704,11 @@ body {
 
 /* TITRE DE LA SECTION */
 #contact h2 {
-    font-size: 2.5rem;
+    font-size: 2rem;
+    font-weight: 600;
     color: #333;
-    margin-bottom: 40px;
+    margin-bottom: 80px;
+    text-transform: uppercase; /* Met le titre en majuscules */
 }
 
 /* CONTAINER PRINCIPAL */
@@ -750,7 +760,7 @@ body {
     display: block;
     width: 100%;
     padding: 12px;
-    background: linear-gradient(90deg, #007BFF, #00D4FF);
+    background: linear-gradient(90deg, var(--orange1), var(--orange2));
     color: white;
     font-weight: bold;
     text-decoration: none;
@@ -762,7 +772,7 @@ body {
 }
 
 .btn-contact:hover {
-    background: linear-gradient(90deg, #0056b3, #0096c7);
+    background: linear-gradient(90deg, var(--orange1), var(--orange2));
 }
 
 /* INFOS CONTACT */
@@ -857,7 +867,7 @@ footer {
 }
 
 .footer-nav a:hover {
-    color: #00D4FF;
+    color: var(--orange);
 }
 
 /* ICONES SOCIALES */
