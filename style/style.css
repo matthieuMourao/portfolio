@@ -240,7 +240,13 @@ body {
     text-transform: uppercase; /* Met le titre en majuscules */
 }
 
-
+.stage p {
+    font-size: 1.1rem; /* Agrandit le texte */
+    color: #333; /* Couleur légèrement foncée */
+    line-height: 1.6; /* Espacement entre les lignes */
+    max-width: 800px; /* Limite la largeur du texte */
+    text-align: center; /* Justifie le texte pour une belle mise en page */
+}
 /* --- CONTAINER DES STAGES --- */
 .stages-container {
     display: flex; /* Met les cartes côte à côte */
