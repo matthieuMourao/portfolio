@@ -12,17 +12,17 @@
 <body>
     <header>
         <ul>
-            <li><a href="/">Acceuil</a></li>
-            <li><a href="/">Présentation</a></li>
-            <li><a href="/">Stages</a></li>
-            <li><a href="/">Compétences</a></li>
-            <li><a href="/">Projets</a></li>
-            <li><a href="/">Veille</a></li>
-            <li><a href="/">Contact</a></li>
+            <li><a href="#acceuil">Acceuil</a></li>
+            <li><a href="#presentation">Présentation</a></li>
+            <li><a href="#stage">Stages</a></li>
+            <li><a href="#competences">Compétences</a></li>
+            <li><a href="#projets">Projets</a></li>
+            <li><a href="#veille-technologique">Veille</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
     </header>
 
-    <div class="slider">
+    <div id="acceuil" class="slider">
 
         <img src="img/slider.jpg" class="slider-background">
         <div class="slider-content">
@@ -33,7 +33,7 @@
         </div>
     </div>
 
-    <section class="presentation">
+    <section id="presentation" class="presentation">
         <img src="img/Developer activity-bro.png" class="img-presentation">
         <div>
             <h2 id="h2-presentation">Présentation</h2>
@@ -42,7 +42,7 @@
     </section> 
 
 
-    <section class="stage">
+    <section id="stage" class="stage">
         <h2 id="h2-stage">Stages</h2>
         <div class="stages-container">
             <img src="img/Website designer-rafiki.png" class="img-stage-1">
@@ -53,7 +53,7 @@
                 <div class="stage-content">
                     <h3>Webmaster CMS</h3>
                     <p>Stage effectué chez Smokeland, où j'ai participé a la gestion et l’amélioration du site e-commerce de l’entreprise.</p>
-                    <a href="stage.html" class="btn-stage" target="_blank">Voir le Rapport</a>
+                    <a href="stage2.html" class="btn-stage" target="_blank">Voir le Rapport</a>
                 </div>
             </div>
             <img src="img/Server-amico.png" class="img-stage-2">
@@ -64,13 +64,13 @@
                 <div class="stage-content">
                     <h3>Service Informatique</h3>
                     <p>Stagiaire au service informatique de la mairie d’Achères, j’ai contribué à la gestion du parc et au support technique.</p>
-                    <a href="stage2.html" class="btn-stage" target="_blank">Voir le Rapport</a>
+                    <a href="stage.html" class="btn-stage" target="_blank">Voir le Rapport</a>
                 </div>
             </div>
         </div>
     </section>
     
-    <section class="competences">
+    <section id="competences" class="competences">
         <h2 id="h2-competences">Compétences</h2>
     
        
@@ -156,35 +156,36 @@
         </div>
     </section>
     
-    <section class="projets">
+    <section id="projets" class="projets">
         <h2>Mes Projets</h2>
+        <p class="intro-projet">Au cours de mon année de BTS SIO option SLAM, j’ai eu l’occasion de mettre en pratique les compétences acquises en développement web, mobile et gestion de projet à travers plusieurs réalisations concrètes. Ces projets m'ont permis de consolider mes connaissances techniques tout en répondant à des besoins réels, que ce soit en autonomie ou en collaboration avec mes camarades.</p>
         <div class="projets-container">
           
             <div class="projet-card">
-                <img src="img/slide.jpg" alt="Projet 1">
+                <img src="img/Portfolio1.png" alt="Projet 1">
                 <div class="projet-info">
-                    <h3>Nom du Projet 1</h3>
-                    <p>Brève description du projet, les technologies utilisées et son objectif.</p>
+                    <h3>Portfolio BTS SIO</h3>
+                    <p>Création d’un site web personnel pour présenter mon parcours, mes compétences, mes projets et mes expériences professionnelles. Le site est responsive, structuré en sections claires, et codé manuellement en HTML/CSS/JS pour valoriser mes compétences en développement front-end.</p>
                     <a href="#" class="btn-projet" target="_blank">Voir le Projet</a>
                 </div>
             </div>
     
            
             <div class="projet-card">
-                <img src="img/slider.jpg" alt="Projet 2">
+                <img src="img/Apllication_Web.png" alt="Projet 2">
                 <div class="projet-info">
-                    <h3>Nom du Projet 2</h3>
-                    <p>Brève description du projet, les technologies utilisées et son objectif.</p>
+                    <h3>Application d'Émargement Web</h3>
+                    <p>Développement collaboratif d’une application d’émargement en ligne destinée à notre établissement. Réalisée avec le framework Symfony, cette application permet aux enseignants et aux élèves de gérer leurs présences. Projet réalisé en équipe de trois, avec mise en place d’une base de données relationnelle et d’une interface sécurisée.</p>
                     <a href="#" class="btn-projet" target="_blank">Voir le Projet</a>
                 </div>
             </div>
     
             
             <div class="projet-card">
-                <img src="img/slide.jpg" alt="Projet 3">
+                <img src="img/Application_Mobile.png" alt="Projet 3">
                 <div class="projet-info">
-                    <h3>Nom du Projet 3</h3>
-                    <p>Brève description du projet, les technologies utilisées et son objectif.</p>
+                    <h3>Application Mobile d'Émargement</h3>
+                    <p>Développement de la version mobile de notre application d’émargement avec React Native. Cette application permet aux étudiants de signer leur présence directement depuis leur smartphone à l’aide de la librairie <strong>react-native-signature-canvas</strong>, qui capture les signatures numériques. Le projet s’inscrit dans une logique de continuité avec la version web.</p>
                     <a href="#" class="btn-projet" target="_blank">Voir le Projet</a>
                 </div>
             </div>
@@ -193,6 +194,7 @@
 
     <section id="veille-technologique">
         <h2>Veille Technologique</h2>
+
         <div class="veille-container">
             <div class="veille-card">
                 <img src="img/veille1.jpg" alt="Image veille 1">
@@ -247,21 +249,21 @@
     <footer>
         <div class="footer-container">
             <div class="footer-logo">
-                <h3>Mon Portfolio</h3>
+                <h3>Matthieu Mourao</h3>
             </div>
             <ul class="footer-nav">
-                <li><a href="#accueil">Accueil</a></li>
-                <li><a href="#competences">Présentation</a></li>
-                <li><a href="#projets">Stages</a></li>
-                <li><a href="#veille">Compétence</a></li>
-                <li><a href="#contact">Projets</a></li>
-                <li><a href="#contact">Veille</a></li>
+                <li><a href="#acceuil">Accueil</a></li>
+                <li><a href="#presentation">Présentation</a></li>
+                <li><a href="#stage">Stages</a></li>
+                <li><a href="#competences">Compétence</a></li>
+                <li><a href="#projets">Projets</a></li>
+                <li><a href="#veille-technologique">Veille</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
             
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2024 Mon Portfolio | Tous droits réservés</p>
+            <p>&copy; 2025 Mon Portfolio | Tous droits réservés</p>
         </div>
     </footer>
     

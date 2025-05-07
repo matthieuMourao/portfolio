@@ -523,6 +523,17 @@ body {
     text-transform: uppercase; /* Met le titre en majuscules */
 }
 
+.projets p.intro-projet {
+    font-size: 1.1rem;
+    color: #333;
+    line-height: 1.6;
+    max-width: 900px;
+    margin: 0 auto 80px auto; /* espace en dessous */
+    text-align: center;
+   
+}
+
+
 /* CONTENEUR DES PROJETS */
 .projets-container {
     display: flex; /* Utilisation de flexbox pour aligner les cartes horizontalement */
