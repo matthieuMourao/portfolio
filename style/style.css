@@ -636,6 +636,16 @@ body {
     text-transform: uppercase; /* Met le titre en majuscules */
 }
 
+.intro-veille {
+    font-size: 1.1rem;
+    color: #333;
+    line-height: 1.6;
+    max-width: 900px;
+    margin: 0 auto 80px auto;
+    text-align: center;
+}
+
+
 /* CONTENEUR PRINCIPAL */
 .veille-container {
     display: flex;
@@ -663,8 +673,8 @@ body {
 /* IMAGE DES CARTES */
 .veille-card img {
     width: 100%;
-    height: 180px;
-    object-fit: cover;
+    height: 220px;
+    object-fit:cover;
 }
 
 /* CONTENU TEXTE */
