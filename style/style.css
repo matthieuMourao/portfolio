@@ -455,6 +455,26 @@ body {
     transform: scale(1.1);
 }
 
+/* Niveau de compétence caché par défaut */
+.skill-level {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background: rgba(30, 30, 30, 0.8); /* gris anthracite semi-transparent */
+    color: white;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 6px;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+
+  .competence-card:hover .skill-level {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
 /* --- SECTION MOOCs --- */
 .mooc-container {
     display: flex;
@@ -473,6 +493,8 @@ body {
     width: 80%;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
+    min-height: 150px; /*  force une hauteur minimale égale */
+    
 }
 
 .mooc-card:hover {
@@ -750,20 +772,26 @@ body {
 }
 
 .veille-complement {
-    background-color: #f9f9fb; /* léger fond pour distinguer la section */
-    border-left: 4px solid #4a90e2; /* accent visuel */
-    padding: 1rem 1.5rem;
-    margin-top: 2rem;
+    background-color: #f9f9fb;
+    padding: 1.5rem;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
     width: 89%;
-    margin-left: 3%;
+    transition: transform 0.3s ease-in-out;
+    text-align: left;
   }
+
+  .veille-complement:hover {
+    transform: translateY(-5px);
+}
+  
+  
   
   .veille-complement h3 {
+    text-align: center;
     font-size: 1.25rem;
     color: #333;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
   }
   
   .veille-complement p {
