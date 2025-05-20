@@ -4,6 +4,13 @@
     padding: 0;
 }
 
+/* Animation de scroll */
+
+html {
+    scroll-behavior: smooth;
+  }
+  
+
 /* palette de couleurs */
 :root {
     --grey-dark : #1e1e1e;  
@@ -654,6 +661,35 @@ body {
     flex-wrap: wrap; /* Permet le passage en colonne sur mobile */
 }
 
+/* liens dans les conteneurs */
+
+.veille-container h4 {
+    font-size: 1.1rem;
+    color: #2d3748;
+    margin-bottom: 8px;
+    font-weight: 600;
+  }
+
+  .veille-container ul {
+    list-style-type: disc;
+    padding-left: 20px;
+  }
+
+  .veille-container ul li {
+    margin-bottom: 6px;
+  }
+
+  .veille-container ul li a {
+    color: #3182ce;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  .veille-container ul li a:hover {
+    color: #2b6cb0;
+    text-decoration: underline;
+  }
+
 /* CARTES INDIVIDUELLES */
 .veille-card {
     background: white;
@@ -712,6 +748,42 @@ body {
 .btn-veille:hover {
     background: linear-gradient(90deg, #0056b3, #0096c7);
 }
+
+.veille-complement {
+    background-color: #f9f9fb; /* léger fond pour distinguer la section */
+    border-left: 4px solid #4a90e2; /* accent visuel */
+    padding: 1rem 1.5rem;
+    margin-top: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    width: 89%;
+    margin-left: 3%;
+  }
+  
+  .veille-complement h3 {
+    font-size: 1.25rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+  }
+  
+  .veille-complement p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+  }
+  
+  .veille-complement a {
+    color: #4a90e2;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+  
+  .veille-complement a:hover {
+    color: #2d6dcc;
+    text-decoration: underline;
+  }
+  
 
 /* RESPONSIVE DESIGN */
 @media screen and (max-width: 1024px) {
