@@ -177,6 +177,22 @@ header ul li a:hover {
     }
 }
 
+/* RESPONSIVE: slider */
+
+@media screen and (max-width: 768px) {
+    .slide-content h1 {
+      font-size: 2rem;
+    }
+    .slide-content p {
+      font-size: 1rem;
+      max-width: 90%;
+    }
+    .social-slider img {
+      width: 28px;
+      height: 28px;
+    }
+  }
+
 
 body {
     background: var(--gradient-greydark);
@@ -227,22 +243,22 @@ body {
     text-align: center; /* Justifie le texte pour une belle mise en page */
 }
 
-/* Responsive : Ajustements pour petits écrans */
-@media (max-width: 768px) {
+/* RESPONSIVE: Présentation */
+@media screen and (max-width: 768px) {
     .presentation {
-        flex-direction: column; /* Passe en colonne sur mobile */
-        text-align: center; /* Centre tout le contenu */
+      flex-direction: column;
+      padding: 30px 5%;
+      text-align: center;
     }
-
     .img-presentation {
-        width: 80%; /* Adapte la taille de l’image */
+      margin: 0 auto 20px auto;
+      width: 80%;
     }
-
     .presentation p {
-        text-align: center; /* Centre le texte */
+      font-size: 1rem;
+      text-align: justify;
     }
-}
-
+  }
 
 
 #h2-presentation {
@@ -433,6 +449,25 @@ body {
     left: 60%;
 }
 
+/* RESPONSIVE: Stage */
+
+@media screen and (max-width: 768px) {
+    .img-stage-1,
+    .img-stage-2 {
+      display: none;
+    }
+    .stage-card-1,
+    .stage-card-2 {
+      width: 90%;
+      margin: 0 auto;
+    }
+    .stages-container {
+      flex-direction: column;
+      gap: 40px;
+    }
+  }
+  
+
 /* --- SECTION COMPÉTENCES --- */
 .competences {
     text-align: center;
@@ -575,6 +610,23 @@ body {
     margin: auto;
 }
 
+/* RESPONSIVE: Compétences et Moocs */
+
+@media screen and (max-width: 768px) {
+    .competence-container {
+      justify-content: center;
+      gap: 15px;
+    }
+    .competence-card {
+      width: 100px;
+      font-size: 0.9rem;
+    }
+    .competence-card img {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
 
 /* SECTION PROJETS */
 .projets {
@@ -668,25 +720,6 @@ body {
 /* EFFET HOVER SUR LE BOUTON */
 .btn-projet:hover {
     background: linear-gradient(90deg, #e8590c, #f7834a); /* Orange foncé + vif */
-}
-
-
-/* RESPONSIVE DESIGN : ADAPTATION SUR PETITS ÉCRANS */
-@media screen and (max-width: 1024px) {
-    .projet-card {
-        width: 45%; /* Ajuste la taille à 2 projets par ligne sur tablette */
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .projets-container {
-        flex-direction: column; /* Met les projets en colonne sur mobile */
-        align-items: center; /* Centre les projets */
-    }
-
-    .projet-card {
-        width: 90%; /* Les projets prennent presque toute la largeur */
-    }
 }
 
 
@@ -854,13 +887,18 @@ body {
     text-decoration: underline;
   }
   
+/* RESPONSIVE: Projet et veille */
 
-/* RESPONSIVE DESIGN */
-@media screen and (max-width: 1024px) {
-    .veille-card {
-        width: 90%; /* Une seule carte par ligne sur tablette */
+@media screen and (max-width: 768px) {
+    .veille-card,
+    .projet-card {
+      width: 95%;
     }
-}
+    .mooc-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
 
 
 /* SECTION CONTACT */
@@ -1014,21 +1052,30 @@ body {
   
 
 
-/* RESPONSIVE DESIGN */
-@media screen and (max-width: 1024px) {
+/* RESPONSIVE: Contact */
+@media screen and (max-width: 768px) {
     .contact-container {
-        flex-direction: column;
-        text-align: center;
+      flex-direction: column;
+      align-items: center;
     }
-
-    .contact-form, .contact-info {
-        width: 100%;
-    }
-
+    .contact-left,
+    .contact-right,
+    .contact-form,
     .contact-info {
-        text-align: center;
+      width: 100%;
+      max-width: 100%;
     }
-}
+    .avatar-contact {
+      max-width: 250px;
+      width: 80%;
+    }
+    .quote-contact {
+      max-width: 90%;
+      text-align: center;
+      font-size: 0.95rem;
+    }
+  }
+  
 
 /* FOOTER */
 footer {
