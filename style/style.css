@@ -22,10 +22,10 @@ html {
     --gradient-greylight2 : radial-gradient(circle, rgba(238,238,238,1) 5%, rgba(255,255,255,1) 52%, rgba(196,196,196,1) 95%);
     --gradient-blue : rgb(57,86,172);
     --gradient-blue2 : radial-gradient(circle, rgba(57,86,172,1) 5%, rgba(28,61,120,1) 52%, rgba(30,69,106,1) 95%);
-    --bluedark : #13397d;
-    --orangedark : #cd800f;
-    --orange1 :#ff4b1f ;
-    --orange2 :#ff9068 ;
+    --bluedark : #3B82F6;
+    --orangedark : #F97316;
+    --orange1 :#fb5607 ;
+    --orange2 :#ff6d00 ;
 }
 
 /* style de la barre de navigation */
@@ -338,8 +338,23 @@ body {
 }
 
 .stage-card-2 a:hover {
-    background-color: #0056b3; /* Bleu foncé au survol */
+    background-color: #EA580C; /* Bleu foncé au survol */
 }
+
+.stage-card-1 h3,
+.stage-card-2 h3 {
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+.stage-card-1 a,
+.stage-card-2 a {
+    display: block;
+    margin: 0 auto; /* Centre horizontalement */
+    text-align: center;
+}
+
+
 
 /* --- EN-TÊTE DES DATES --- */
 .stage-header-1 {
@@ -616,7 +631,7 @@ body {
 .btn-projet {
     display: inline-block; /* Permet de donner une taille et un style au bouton */
     padding: 10px 20px; /* Ajoute un espace interne */
-    background: linear-gradient(90deg, var(--orange1), var(--orange2)); /* Dégradé bleu moderne */
+    background: linear-gradient(90deg, #ff6a00, #ff944d); /* Dégradé bleu moderne */
     color: white; /* Texte en blanc */
     font-weight: bold; /* Texte en gras */
     text-decoration: none; /* Supprime le soulignement */
@@ -626,8 +641,9 @@ body {
 
 /* EFFET HOVER SUR LE BOUTON */
 .btn-projet:hover {
-    background: linear-gradient(90deg, #0056b3, #0096c7); /* Change légèrement la couleur au survol */
+    background: linear-gradient(90deg, #e8590c, #f7834a); /* Orange foncé + vif */
 }
+
 
 /* RESPONSIVE DESIGN : ADAPTATION SUR PETITS ÉCRANS */
 @media screen and (max-width: 1024px) {
@@ -887,7 +903,7 @@ body {
     display: block;
     width: 100%;
     padding: 12px;
-    background: linear-gradient(90deg, var(--orange1), var(--orange2));
+    background: linear-gradient(90deg, #ff6a00, #ff944d);
     color: white;
     font-weight: bold;
     text-decoration: none;
@@ -899,7 +915,7 @@ body {
 }
 
 .btn-contact:hover {
-    background: linear-gradient(90deg, var(--orange1), var(--orange2));
+    background: linear-gradient(90deg, #e8590c, #f7834a);
 }
 
 /* INFOS CONTACT */
