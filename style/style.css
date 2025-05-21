@@ -83,6 +83,42 @@ header ul li a:hover {
     }
 }
 
+/* --- Menu hamburger pour mobile --- */
+.hamburger {
+    display: none;
+    font-size: 30px;
+    color: white;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    z-index: 1100;
+  }
+  
+  @media screen and (max-width: 768px) {
+    header ul {
+      display: none;
+      flex-direction: column;
+      background-color: var(--grey-dark);
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      padding: 20px 0;
+      text-align: center;
+      gap: 20px;
+    }
+  
+    header ul.active {
+      display: flex;
+    }
+  
+    .hamburger {
+      display: block;
+    }
+  }
+  
+
 
 
 .slider {
