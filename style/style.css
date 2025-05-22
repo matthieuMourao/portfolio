@@ -83,39 +83,53 @@ header ul li a:hover {
     }
 }
 
-/* --- Menu hamburger pour mobile --- */
+/* -------- MENU HAMBURGER -------- */
 .hamburger {
     display: none;
     font-size: 30px;
     color: white;
-    position: absolute;
-    top: 15px;
-    right: 20px;
     cursor: pointer;
-    z-index: 1101;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 1001;
   }
   
-  @media screen and (max-width: 768px) {
-    header ul {
+  /* Mobile navigation */
+  @media (max-width: 768px) {
+    header {
+      position: relative;
+    }
+  
+    .hamburger {
+      display: block;
+    }
+  
+    .nav-links {
       display: none;
       flex-direction: column;
+      align-items: center;
       background-color: var(--grey-dark);
       position: absolute;
       top: 60px;
       left: 0;
       width: 100%;
       padding: 20px 0;
-      text-align: center;
-      gap: 20px;
-      z-index: 1100;
+      z-index: 1000;
     }
   
-    header ul.active {
+    .nav-links.active {
       display: flex;
     }
   
-    .hamburger {
-      display: block;
+    .nav-links li a {
+      color: white;
+      font-size: 18px;
+      padding: 10px;
+    }
+  
+    .nav-links li a:hover {
+      color: var(--orange);
     }
   }
   
